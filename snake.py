@@ -162,7 +162,7 @@ def respawn():
     fruit_group.update()
     print("RESPAWN")
 
-# Create snake object and group
+# Create snake and fruit object groups
 snek = Snake()
 snake_group = pygame.sprite.Group()
 snake_group.add(snek)
@@ -186,7 +186,7 @@ while run:
         for rect in grid:
             pygame.draw.rect(screen, grid_color, rect, 1)       
         score()
-        snek.move()                                             #Bewegung
+        snek.move()                                             #Movement
         snake_group.update()                                    #spawn
         fruit_group.draw(screen)
         fruit_group.update()
